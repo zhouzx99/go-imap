@@ -731,8 +731,8 @@ type Envelope struct {
 
 // Parse an envelope from fields.
 func (e *Envelope) Parse(fields []interface{}) error {
-	if len(fields) < 10 {
-		return errors.New("ENVELOPE doesn't contain 10 fields")
+	if len(fields) < 3 {
+		return errors.New("ENVELOPE doesn't contain 3 fields")
 	}
 
 	if date, ok := fields[0].(string); ok {
